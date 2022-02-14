@@ -27,7 +27,7 @@ class sqlconnector:
             
 
     def fetch(self,query):
-        """feetch data from data through SQL query
+        """fetch data through SQL query
 
         :param query: sql query
         :param database: database to select from
