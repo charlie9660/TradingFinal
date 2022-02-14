@@ -46,4 +46,5 @@ class sqlconnector:
             print(e)
             print('Retrying Connection...')
             self.connect()
+            return self.fetch(query)
         return None
