@@ -26,7 +26,7 @@ class sqlconnector:
             print('Connection Failure')
             
 
-    def fetch(self,query):
+    def fetch( self , query  ):
         """fetch data through SQL query
 
         :param query: sql query
@@ -35,7 +35,7 @@ class sqlconnector:
         """  
         try:
             cursor = self.connection.cursor()
-            cursor.execute(query)
+            cursor.execute(query )
             result = cursor.fetchall()
             num_fields = len(cursor.description)
             field_names = [i[0] for i in cursor.description]
@@ -46,5 +46,5 @@ class sqlconnector:
             print(e)
             print('Retrying Connection...')
             self.connect()
-            return self.fetch(query)
+            return self.fetch( query )
         return None
